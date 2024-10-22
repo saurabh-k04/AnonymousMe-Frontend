@@ -1,0 +1,19 @@
+<form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput type="text" name="username" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" ngModel required>
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit">Login</button>
+  
+    <!-- Display response message -->
+    <div *ngIf="responseMessage" class="response-message">
+      {{ responseMessage }}
+    </div>
+</form>
+  
